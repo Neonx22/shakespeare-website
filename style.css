@@ -22,7 +22,7 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    background: red;
+    background: red !important;
 }
 
 /* NAVBAR */
@@ -276,6 +276,7 @@ p {
         max-width: 90%;
     }
 }
+
 
 
 
