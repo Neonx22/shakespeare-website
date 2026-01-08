@@ -16,6 +16,13 @@ body {
     overflow-x: hidden;
 }
 
+body {
+    background-image: url("Images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
 /* NAVBAR */
 nav {
     height: 60px;
@@ -267,13 +274,7 @@ p {
         max-width: 90%;
     }
 }
-.container{
-    background-image: url("Images/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-}
+
 
 
 
