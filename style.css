@@ -18,10 +18,11 @@ body {
 
 
 body {
-    background-image: url("Images/bg.jpg");
+    /* background-image: url("Images/bg.jpg"); */
     background-size: cover;
     background-position: center;
     color: white;
+    background: red;
 }
 
 /* NAVBAR */
@@ -275,5 +276,6 @@ p {
         max-width: 90%;
     }
 }
+
 
 
