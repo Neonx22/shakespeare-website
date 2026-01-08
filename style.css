@@ -17,13 +17,13 @@ body {
 }
 
 
-body {
+/* body { */
     /* background-image: url("Images/bg.jpg"); */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    background: red !important;
-}
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* color: white; */
+    /* background: red !important; */
+/* } */
 
 /* NAVBAR */
 nav {
@@ -275,6 +275,13 @@ p {
     .work-block {
         max-width: 90%;
     }
+}
+.container{
+    background-image: url("Images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
 }
 
 
