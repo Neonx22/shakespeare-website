@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Default: no scroll only for home */
+body {
+    overflow-x: hidden;
+}
+
+
+body {
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e6c68a;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: white;
+    border-bottom: 2px solid #e6c68a;
+    padding-bottom: 4px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.65);
+    padding: 40px;
+}
+
+/* LEFT */
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.left img {
+    max-height: 90vh;      /* increased height */
+    max-width: 100%;
+    transform: scale(1.15); /* makes image larger */
+    filter: drop-shadow(0px 0px 18px black);
+}
+
+/* RIGHT */
+.right {
+    flex: 1;
+    padding: 20px 40px;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.8;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left img {
+        max-height: 40vh;
+    }
+
+    .right {
+        padding: 20px;
+    }
+}
+/* ENABLE SCROLL FOR GLOBE PAGE */
+.scroll-page {
+    overflow-y: auto;
+}
+
+/* GLOBE PAGE LAYOUT */
+.globe-layout {
+    display: flex;
+    gap: 50px;
+    padding: 100px 8vw 60px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* LEFT SIDE (CARDS) */
+.globe-left {
+    flex: 1;
+}
+
+.card {
+    background-color: #4b3621; /* ☕ coffee color */
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* RIGHT SIDE (TEXT) */
+.globe-right {
+    flex: 1.4;
+    color: white;
+}
+
+.globe-right h1 {
+    margin-bottom: 25px;
+}
+
+.globe-right p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 900px) {
+    .globe-layout {
+        flex-direction: column;
+    }
+}
+/* WORKS PAGE LAYOUT */
+.works-page {
+    padding: 100px 8vw 60px;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.card-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0 60px;
+    flex-wrap: wrap;
+}
+
+.work-block {
+    max-width: 300px;
+}
+
+/* COFFEE GRADIENT CARD */
+.work-card {
+    background: linear-gradient(135deg, #3e2723, #6f4e37);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.work-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.work-card h2 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.work-block p {
+    margin-top: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .card-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ===== SIMPLE FADE-UP ===== */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CARD HOVER EFFECT */
+.work-card, .card {
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover, .card:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .left img {
+        max-height: 35vh;
+        transform: scale(1);
+    }
+
+    .right {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 900px) {
+    .globe-layout {
+        flex-direction: column;
+        padding: 80px 5vw;
+    }
+
+    .globe-left, .globe-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .works-page {
+        padding: 80px 5vw;
+    }
+
+    .work-block {
+        max-width: 90%;
+    }
+}
